@@ -1,0 +1,34 @@
+﻿<Window x:Class="QuizApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QuizApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <TextBlock Text="Quiz App" FontSize="28" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,20" />
+
+        <!-- Question Area -->
+        <StackPanel Grid.Row="1" Margin="10">
+            <TextBlock Name="QuestionText" Text="Question will appear here." FontSize="20" TextWrapping="Wrap" Margin="0,0,0,20" />
+            <StackPanel Name="AnswerOptions" Orientation="Vertical" Margin="10">
+                <!-- Buttons for options will be generated dynamically -->
+            </StackPanel>
+        </StackPanel>
+
+        <!-- Footer -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0">
+            <Button Content="Next" Width="100" Click="NextButton_Click" IsEnabled="False" Name="NextButton" />
+        </StackPanel>
+    </Grid>
+
+</Window>
